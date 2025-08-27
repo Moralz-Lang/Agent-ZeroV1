@@ -6,7 +6,6 @@ def main():
     print("[+] Downloading CVE feed (NVD 2.0)...")
     download(NVD_JSON_URL, GZ_PATH)
 
-    # SHA256 optional
     try:
         sha_resp = requests.head(SHA256_URL)
         if sha_resp.status_code == 200:
